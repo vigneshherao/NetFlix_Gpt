@@ -1,7 +1,10 @@
+import Body from "./components/Body";
+import Login from "./components/Login";
+
 function App() {
   return (
     <div className="App">
-      <h2>Hai</h2>
+      <Body/>
     </div>
   );
 }
