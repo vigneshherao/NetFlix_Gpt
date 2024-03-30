@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Head from "./Head";
 import loginValidation from "../utils/loginValidation";
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "firebase/auth";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -12,16 +13,48 @@ const Login = () => {
 
   const email = useRef(null);
   const password = useRef(null);
+  const username = useRef(null);
 
   const authenticate = () => {
-    console.log(email.current.value);
-
     const validAunticate = loginValidation(
       email.current.value,
       password.current.value
     );
-
     setValidMessage(validAunticate);
+    if(validAunticate) return;
+
+    if(!isSignIn){
+      const auth = getAuth();
+      createUserWithEmailAndPassword(auth,email.current.value,password.current.value)
+        .then((userCredential) => {
+          // Signed up 
+          const user = userCredential.user;
+          console.log(user);
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setValidMessage(errorCode + errorMessage)
+          // ..
+        });
+    }
+    else{
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth,email.current.value,password.current.value)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user+"signedin")
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setValidMessage("User not found!")
+        });
+    }
+
   };
 
 
@@ -41,6 +74,7 @@ const Login = () => {
         </h2>
         {isSignIn ? null : (
           <input
+            ref={username}
             type="text"
             placeholder="User Name"
             className="w-full p-4 m-2 my-4 bg-gray-800"
@@ -76,7 +110,7 @@ const Login = () => {
           className="cursor-pointer hover:underline mt-2"
           onClick={signInHandler}
         >
-          New to Netflix? Sign up now
+         {!isSignIn? "New to Netflix? Sign up now":"Already a User? Sign In now"}
         </p>
         <p className="text-sm m-2 text-blue-300 text-center">
           This page is protected by Google reCAPTCHA to ensure you're not a bot
