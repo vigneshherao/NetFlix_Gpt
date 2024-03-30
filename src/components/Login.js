@@ -1,12 +1,16 @@
 import React, { useRef, useState } from "react";
 import Head from "./Head";
 import loginValidation from "../utils/loginValidation";
-import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile  } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [validMessage, setValidMessage] = useState("");
-
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const signInHandler = () => {
     setIsSignIn(!isSignIn);
   };
@@ -29,8 +33,15 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up 
           const user = userCredential.user;
-          console.log(user);
-          // ...
+          updateProfile(user, {
+            displayName: username.current.value, photoURL: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+          }).then(() => {
+            const {displayName,uid,email,photoURL} = auth.currentUser;
+            dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}))
+            navigate("/browse")
+          }).catch((error) => {
+            setValidMessage(error);
+          });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -45,6 +56,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
+          navigate("/browse")
           console.log(user+"signedin")
           // ...
         })
@@ -110,7 +122,7 @@ const Login = () => {
           className="cursor-pointer hover:underline mt-2"
           onClick={signInHandler}
         >
-         {!isSignIn? "New to Netflix? Sign up now":"Already a User? Sign In now"}
+         {isSignIn? "New to Netflix? Sign up now":"Already a User? Sign In Now"}
         </p>
         <p className="text-sm m-2 text-blue-300 text-center">
           This page is protected by Google reCAPTCHA to ensure you're not a bot
