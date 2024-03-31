@@ -2,14 +2,12 @@ import React, { useRef, useState } from "react";
 import Head from "./Head";
 import loginValidation from "../utils/loginValidation";
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile  } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [validMessage, setValidMessage] = useState("");
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const signInHandler = () => {
     setIsSignIn(!isSignIn);
@@ -31,14 +29,12 @@ const Login = () => {
       const auth = getAuth();
       createUserWithEmailAndPassword(auth,email.current.value,password.current.value)
         .then((userCredential) => {
-          // Signed up 
           const user = userCredential.user;
           updateProfile(user, {
             displayName: username.current.value, photoURL: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
           }).then(() => {
             const {displayName,uid,email,photoURL} = auth.currentUser;
             dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}))
-            navigate("/browse")
           }).catch((error) => {
             setValidMessage(error);
           });
@@ -47,18 +43,14 @@ const Login = () => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setValidMessage(errorCode + errorMessage)
-          // ..
         });
     }
     else{
       const auth = getAuth();
       signInWithEmailAndPassword(auth,email.current.value,password.current.value)
         .then((userCredential) => {
-          // Signed in 
           const user = userCredential.user;
-          navigate("/browse")
           console.log(user+"signedin")
-          // ...
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -66,7 +58,6 @@ const Login = () => {
           setValidMessage("User not found!")
         });
     }
-
   };
 
 
