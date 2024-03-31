@@ -3,6 +3,7 @@ import Head from './Head';
 import { apiOptions } from '../utils/constant';
 import { useDispatch } from 'react-redux';
 import { addNowPlayingMovies } from '../utils/movieSlice';
+import MainContainer from './MainContainer';
 
 const Browse = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const Browse = () => {
   return (
     <div>
       <Head/>
+      <MainContainer/>
     </div>
   )
 }

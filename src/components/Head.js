@@ -13,7 +13,6 @@ import {userIcon} from "../utils/constant"
 const Head = () => {
   const user = useSelector((store)=>store.user)
   const dispatch = useDispatch();
-  console.log(user);
   const navigate = useNavigate();
 
 
