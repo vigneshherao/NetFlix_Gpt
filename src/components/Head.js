@@ -16,7 +16,7 @@ const Head = () => {
   console.log(user);
   const navigate = useNavigate();
 
-  
+
   const signOutMehod = ()=>{
     const auth = getAuth();
     signOut(auth).then(() => {
@@ -59,7 +59,7 @@ const Head = () => {
             <React.Fragment>
               <img
                 {...bindTrigger(popupState)}
-                className="w-9 h-9 rounded-sm justify-center cursor-pointer"
+                className="w-9 h-9 rounded-sm justify-center  cursor-pointer"
                 src={userIcon}
               ></img>
               <Menu {...bindMenu(popupState)}>
