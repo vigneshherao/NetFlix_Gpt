@@ -1,31 +1,16 @@
-import React, { useEffect } from 'react'
-import Head from './Head';
-import { apiOptions } from '../utils/constant';
-import { useDispatch } from 'react-redux';
-import { addNowPlayingMovies } from '../utils/movieSlice';
-import MainContainer from './MainContainer';
+import React from "react";
+import Head from "./Head";
+import MainContainer from "./MainContainer";
+import useNowPlaying from "../utils/useNowPlaying";
 
 const Browse = () => {
-  const dispatch = useDispatch();
-
-  useEffect(()=>{
-    fetchNowPlayingMvs();
-  },[])
-
-
-  const fetchNowPlayingMvs = async ()=>{
-    const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1',apiOptions);
-    const movies = await data.json();
-    dispatch(addNowPlayingMovies(movies.results));
-  }
-
-
+  useNowPlaying();
   return (
     <div>
-      <Head/>
-      <MainContainer/>
+      <Head />
+      <MainContainer />
     </div>
-  )
-}
+  );
+};
 
 export default Browse;
