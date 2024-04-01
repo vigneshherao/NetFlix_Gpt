@@ -11,7 +11,7 @@ const VideoCard = ({ img }) => {
       onMouseLeave={() => setShowView(false)}
     >
       {showView && (
-        <div className="hidden sm:absolute top-32 left-16">
+        <div className="hidden sm:block absolute top-32 left-16">
           <span className="text-white font-semibold border p-2 rounded-sm">Watch +</span>
         </div>
       )}
