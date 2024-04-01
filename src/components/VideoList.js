@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const VideoList = ({ title, movies }) => {
+
   const settings = {
     infinite: true,
     speed: 500,
