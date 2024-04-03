@@ -19,6 +19,22 @@ const VideoList = ({ title, movies }) => {
           slidesToScroll: 2,
         },
       },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
     ],
   };
 
