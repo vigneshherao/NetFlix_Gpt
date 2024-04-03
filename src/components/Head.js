@@ -9,6 +9,9 @@ import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
 import { userIcon } from "../utils/constant";
 import { FaRegBell } from "react-icons/fa6";
+import {toggleGptBtn} from "../utils/gptSlice"
+
+
 const Head = () => {
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
@@ -49,12 +52,16 @@ const Head = () => {
     return () => unSubscribe;
   }, []);
 
+  const gptToggleFun = () =>{
+      dispatch(toggleGptBtn())
+  } 
+
   return (
-    <div className="flex  justify-between absolute z-10  w-[100%] bg-gradient-to-b from-black">
+    <div className="flex  justify-between sm:px-7 absolute z-10  w-[100%] bg-gradient-to-b from-black">
       <div className="flex">
         <div>
           <img
-            className="w-52 ml-[5%]"
+            className="w-48 sm:w-52 ml-[5%]"
             src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
           ></img>
         </div>
@@ -69,7 +76,8 @@ const Head = () => {
       </div>
       {user && (
         <div className=" w-52 h-20 flex justify-center items-center gap-6">
-          <div><FaRegBell className="text-white text-xl cursor-pointer" /></div>
+          <div><button className="bg-red-700 font-semibold text-white p-2 rounded-md font-sans" onClick={gptToggleFun}>GptSearch</button></div>
+          <div className=""><FaRegBell className="text-white text-xl cursor-pointer" /></div>
           <PopupState variant="popover" popupId="demo-popup-menu">
             {(popupState) => (
               <React.Fragment>
@@ -82,8 +90,8 @@ const Head = () => {
                   <MenuItem onClick={popupState.close}>
                     {user.displayName}
                   </MenuItem>
-                  <MenuItem onClick={popupState.close}>My account</MenuItem>
-                  <MenuItem onClick={signOutMehod}>Signout</MenuItem>
+                  <MenuItem onClick={""}>My Acount</MenuItem>
+                  <MenuItem onClick={signOutMehod}>Sign Out</MenuItem>
                 </Menu>
               </React.Fragment>
             )}
