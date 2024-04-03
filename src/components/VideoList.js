@@ -9,13 +9,13 @@ const VideoList = ({ title, movies }) => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 7,
     slidesToScroll: 5,
     responsive: [
       {
         breakpoint: 700,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 2,
         },
       },
