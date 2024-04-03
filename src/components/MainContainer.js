@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import VideoBackGround from "./VideoBackGround";
 import VideoTitle from "./VideoTitle";
@@ -9,7 +9,7 @@ const MainContainer = () => {
 
   if (!nowPlaying || !nowPlaying.length) return null;
 
-  const mainVideoPlayer = nowPlaying[Math.floor(Math.random() * 20)];
+  const mainVideoPlayer = nowPlaying[9]? nowPlaying[9]:nowPlaying[Math.floor(Math.random() * 20)];
 
   if (!mainVideoPlayer) return null;
   const { title, overview, id } = mainVideoPlayer;
