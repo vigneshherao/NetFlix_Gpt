@@ -6,7 +6,7 @@ const VideoCard = ({ img }) => {
 
   return (
     <div 
-      className="ml-2 p-2 cursor-pointer w-36 md:w-48 transition-transform duration-200 ease-in-out transform sm:hover:scale-125"
+      className="ml-2 p-4 sm:p-1 cursor-pointer w-36 md:w-48 transition-transform duration-200 ease-in-out transform sm:hover:scale-125"
       onMouseEnter={() => setShowView(true)}
       onMouseLeave={() => setShowView(false)}
     >
