@@ -1,5 +1,5 @@
 import React from "react";
-import { BsPlayFill } from "react-icons/bs";
+import { play } from "../utils/stringConstants";
 
 const VideoTitle = ({ title, description }) => {
   return (
@@ -8,7 +8,7 @@ const VideoTitle = ({ title, description }) => {
       <p className="sm:w-1/4">{description}</p>
       <div className="flex p-2 md:p-0 md:pt-2">
         <button className="font-semibold justify-center items-center hover:bg-opacity-80 px-2 md:px-4 py-2 bg-white text-black rounded-md w-[100px] min-w-[100px] flex">
-          Play▶️
+          {play}
         </button>
       </div>
     </div>

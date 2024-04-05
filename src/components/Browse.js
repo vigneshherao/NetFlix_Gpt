@@ -7,11 +7,9 @@ import useUpComing from "../utils/useUpComing";
 import useTopRatedMovies from "../utils/useTopRatedMovies";
 import GptSearch from "./GptSearch";
 import { useSelector } from "react-redux";
-import SecondaryContainer from "./SecondaryContainer";
 
 const Browse = () => {
   const isGptOn = useSelector((store) => store.gpt.gptButton);
-  console.log(isGptOn);
   useTopRatedMovies();
   useUpComing();
   usePopularMvs();
@@ -25,7 +23,6 @@ const Browse = () => {
       ) : (
         <>
           <MainContainer />
-          <SecondaryContainer />
         </>
       )}
     </div>

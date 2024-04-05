@@ -10,6 +10,47 @@ export const apiOptions = {
   },
 };
 
+export const logo =
+  "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
 
+export const netflixUser =
+  "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png";
 
 export const imgPoster = "https://image.tmdb.org/t/p/w500/";
+
+export const netflixBackGround =
+  "https://preview.redd.it/how-can-someone-make-this-background-with-html-and-css-i-v0-zjgs096khv591.jpg?width=1080&crop=smart&auto=webp&s=5ec8b5f14222e27eecd19b9f5428793bcc857b58";
+
+export const navItems = ["Home", "Movies", "New & Popular", "My List"];
+
+export const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 7,
+  slidesToScroll: 5,
+  responsive: [
+    {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+  ],
+};

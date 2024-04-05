@@ -3,41 +3,9 @@ import VideoCard from "./VideoCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { settings } from "../utils/constant";
 
 const VideoList = ({ title, movies }) => {
-
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 7,
-    slidesToScroll: 5,
-    responsive: [
-      {
-        breakpoint: 700,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-    ],
-  };
-
   return (
     <div>
       <h1 className="pb-2 pl-2 text-lg text-white md:text-3xl md:pb-4">

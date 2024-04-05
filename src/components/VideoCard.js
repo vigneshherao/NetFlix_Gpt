@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { imgPoster } from "../utils/constant";
+import { watch } from "../utils/stringConstants";
 
 const VideoCard = ({ img }) => {
   const [showView, setShowView] = useState(false);
@@ -12,7 +13,7 @@ const VideoCard = ({ img }) => {
     >
       {showView && (
         <div className="hidden sm:block absolute top-32 left-16">
-          <span className="text-white font-semibold border p-2 rounded-sm">Watch +</span>
+          <span className="text-white font-semibold border p-2 rounded-sm">{watch}</span>
         </div>
       )}
       <img className="rounded-md" src={imgPoster + img} alt="Poster" />
