@@ -8,7 +8,7 @@ import { settings } from "../utils/constant";
 const VideoList = ({ title, movies }) => {
   return (
     <div>
-      <h1 className="pb-2 pl-2 text-lg text-white md:text-3xl md:pb-4">
+      <h1 className="pb-2 pl-2 text-lg text-white md:text-3xl md:pb-4 md:pl-12">
         {title}
       </h1>
       <Slider {...settings}>

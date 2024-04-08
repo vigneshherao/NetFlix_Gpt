@@ -20,7 +20,7 @@ const MainContainer = () => {
   const { title, overview, id } = mainVideoPlayer;
 
   return (
-    <div>
+    <div className="pt-16 sm:pt-0 bg-black">
       <VideoTitle title={title} description={overview} />
       <VideoBackGround videoId={id} />
       <SecondaryContainer/>
