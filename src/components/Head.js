@@ -36,7 +36,7 @@ const Head = () => {
   }, []);
 
   return (
-    <div className="flex  justify-between sm:px-7 absolute z-10  w-[100%] bg-gradient-to-b from-black">
+    <div className="flex  justify-between sm:px-7 absolute z-10  w-[100%] bg-gradient-to-b from-black md:pr-24">
       <div className="flex">
         <div>
           <img className="w-48 sm:w-52 ml-[5%]" src={logo}></img>

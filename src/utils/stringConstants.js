@@ -17,3 +17,13 @@ export  const watch = "Watch +";
 
 
 export const play = "Play▶️";
+
+
+export const languages = {
+    en:{
+        search:"Search",
+        Recommand:"Recommend some movies"
+    }
+}
+
+

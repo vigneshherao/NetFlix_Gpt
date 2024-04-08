@@ -34,6 +34,8 @@ export const settings = {
       settings: {
         slidesToShow: 3,
         slidesToScroll: 2,
+        prevArrow: false,
+        nextArrow: false,
       },
     },
     {
@@ -41,6 +43,8 @@ export const settings = {
       settings: {
         slidesToShow: 5,
         slidesToScroll: 2,
+        prevArrow: false,
+        nextArrow: false,
       },
     },
     {
@@ -50,6 +54,8 @@ export const settings = {
         slidesToScroll: 3,
         infinite: true,
         dots: true,
+        prevArrow: false,
+        nextArrow: false,
       },
     },
   ],

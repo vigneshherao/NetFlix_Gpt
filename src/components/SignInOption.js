@@ -9,10 +9,13 @@ import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { removeUser } from "../utils/userSlice";
+import {selectLang} from "../utils/multilingual"
+import { changeLanguage } from "../utils/multiSlice";
 
 const SignInOption = () => {
   const user = useSelector((store) => store.user);
-
+  const gpt = useSelector((store) => store.gpt.gptButton);
+  console.log(gpt)
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -34,12 +37,18 @@ const SignInOption = () => {
 
   return (
     <div className=" w-52 h-20 flex justify-center items-center gap-6">
+      <select className="hidden md:block border-none bg-slate-200 p-2 rounded-md" onChange={(e)=>dispatch(changeLanguage(e.target.value))}>
+        {
+          selectLang.map((lang)=><option id={lang.id} value={lang.id}>{lang.name}</option> )
+        }
+
+      </select>
       <div>
         <button
           className="bg-red-700 font-semibold text-white p-2 rounded-md font-sans"
           onClick={gptToggleFun}
         >
-          GptSearch
+          {gpt?"Home":"GptSearch"}
         </button>
       </div>
       <div className="">
