@@ -8,6 +8,7 @@ export const btnLang={
         homePageHead3:"Trending Now",
         homePageHead4:"Top Rated Movies",
         homePageHead5:"Night Thriller",
+        gptSearchBtn:"GptSearch"
     },
     hin:{
         search:"खोज",
@@ -18,6 +19,7 @@ export const btnLang={
         homePageHead3:"अब फैशन में है",
         homePageHead4:"शीर्ष रेटेड फिल्में",
         homePageHead5:"नाइट थ्रिलर",
+        gptSearchBtn:"Gptखोज"
     },
     mal:{
         search:"തിരയുക",
@@ -28,6 +30,8 @@ export const btnLang={
         homePageHead3:"ഇപ്പോൾ ട്രെൻഡുചെയ്യുന്നു",
         homePageHead4:"മികച്ച റേറ്റുചെയ്ത സിനിമകൾ",
         homePageHead5:"നൈറ്റ് ത്രില്ലർ",
+        gptSearchBtn:"Gptതിരയൽ"
+
     },
     kan:{
         search:"ಹುಡುಕಿ",
@@ -38,6 +42,7 @@ export const btnLang={
         homePageHead3:"ಈಗ ಟ್ರೆಂಡಿಂಗ್",
         homePageHead4:"ಉನ್ನತ ದರ್ಜೆಯ ಚಲನಚಿತ್ರಗಳು",
         homePageHead5:"ನೈಟ್ ಥ್ರಿಲ್ಲರ್",
+        gptSearchBtn:"Gptಹುಡುಕಾಟ"
     },
     tam:{
         search:"தேடல்",
@@ -48,6 +53,7 @@ export const btnLang={
         homePageHead3:"இப்போது டிரெண்டிங்",
         homePageHead4:"சிறந்த தரமதிப்பீடு பெற்ற திரைப்படங்கள்",
         homePageHead5:"இரவு திரில்லர்",
+        gptSearchBtn:"Gptதேடல்"
     }
 }
 
