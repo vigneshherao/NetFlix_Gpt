@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { settings } from "../utils/constant";
 
 const VideoList = ({ title, movies }) => {
+  if (!movies || !Array.isArray(movies) || movies.length === 0) return null;
   return (
     <div>
       <h1 className="pb-2 pl-2 text-lg text-white md:text-3xl md:pb-4 md:pl-12">
@@ -15,7 +16,7 @@ const VideoList = ({ title, movies }) => {
         {movies &&
           movies.map((movie) => (
             <div key={movie.id}>
-              <VideoCard img={movie.poster_path} />
+              <VideoCard img={movie.poster_path} name={movie?.original_title} />
             </div>
           ))}
       </Slider>

@@ -62,4 +62,5 @@ export const settings = {
 };
 
 
-export const gptApi="";
+export const gptApi='AIzaSyB0PQsVW6OmZ6x8kZHBsu0RZ4KjkyAYwgE';
+
