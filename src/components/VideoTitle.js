@@ -1,8 +1,16 @@
 import React from "react";
 import { play } from "../utils/stringConstants";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { isInfoChange } from "../utils/movieSlice";
 
 const VideoTitle = ({ title, description }) => {
+  const dispatch =  useDispatch();
+
+  const isHandleInfo = ()=>{
+    dispatch(isInfoChange())
+  }
+
   return (
     <div className="w-screen aspect-video pt-[25%] md:pt-[20%] px-6 md:px-12 absolute text-white bg-gradient-to-r from-black">
       <h2 className="text-lg md:text-6xl font-netflixSansBold text-white">{title}</h2>
@@ -11,7 +19,7 @@ const VideoTitle = ({ title, description }) => {
         <button className="font-semibold justify-center items-center hover:bg-opacity-80 px-2 md:px-4 py-2 rounded bg-white text-black  w-[100px] min-w-[100px] md:flex">
           <Link to={`/watch/?name=${encodeURIComponent(title)}`}>{play}</Link>
         </button>
-        <button className="font-semibold justify-center items-center hover:bg-opacity-80 px-2 md:px-4 py-2 ml-2 rounded bg-gray-400 bg-opacity-30 text-white  w-[100px] min-w-[100px] md:flex">
+        <button className="font-semibold justify-center items-center hover:bg-opacity-80 px-2 md:px-4 py-2 ml-2 rounded bg-gray-400 bg-opacity-30 text-white  w-[100px] min-w-[100px] md:flex" onClick={isHandleInfo}>
          Info ℹ️
         </button>
       </div>
