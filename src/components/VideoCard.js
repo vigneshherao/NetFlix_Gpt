@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { imgPoster } from "../utils/constant";
+import { image, imgPoster } from "../utils/constant";
 import { watch } from "../utils/stringConstants";
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,9 @@ const VideoCard = ({ img, name }) => {
       )}
       <Link to={`/watch/?name=${encodeURIComponent(name)}`}>
         {" "}
-        <img className="rounded-md" src={imgPoster + img} alt="Poster" />
+        {
+          img? <img className="rounded-md" src={imgPoster + img} alt="Poster" />:<img src={image}alt="no image found"/>
+        }
       </Link>
     </div>
   );

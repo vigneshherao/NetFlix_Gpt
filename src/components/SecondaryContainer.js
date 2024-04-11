@@ -12,7 +12,7 @@ const SecondaryContainer = () => {
 
   return (
     <div className=" bg-black h-[180vh] sm:h-[100%]">
-      <div className="top-20 sm:-top-48 relative z-20">
+      <div className="px-7 md:px-0 top-20 sm:-top-48 relative z-20">
         <VideoList title={btnLang[lang].homePageHead1} movies={moviesList}></VideoList>
         <VideoList title={btnLang[lang].homePageHead2} movies={upcomingMovies}></VideoList>
         <VideoList title={btnLang[lang].homePageHead3} movies={popularMovies}></VideoList>

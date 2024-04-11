@@ -64,3 +64,6 @@ export const settings = {
 
 export const gptApi='AIzaSyB0PQsVW6OmZ6x8kZHBsu0RZ4KjkyAYwgE';
 
+
+
+export const image ="https://i.ebayimg.com/images/g/hVYAAOSw8GtZTBJ0/s-l1600.jpg";

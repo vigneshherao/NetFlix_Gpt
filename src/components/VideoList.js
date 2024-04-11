@@ -7,6 +7,8 @@ import { settings } from "../utils/constant";
 
 const VideoList = ({ title, movies }) => {
   if (!movies || !Array.isArray(movies) || movies.length === 0) return null;
+  if (movies.length < 2) return null;
+
   return (
     <div>
       <h1 className="pb-2 pl-2 text-lg text-white md:text-3xl md:pb-4 md:pl-12">
