@@ -14,7 +14,7 @@ const Head = () => {
           <img className="my-3 w-32 sm:w-52 sm:m-0 ml-[5%]" src={logo}></img>
         </div>
         {user && (
-          <div className="hidden sm:flex ml-8">
+          <div className="hidden md:hidden sm:flex ml-8">
             <ul className="flex justify-center items-center gap-8 text-white">
               {navItems.map((item, index) => (
                 <li key={index} className="hover:opacity-70 cursor-pointer">
