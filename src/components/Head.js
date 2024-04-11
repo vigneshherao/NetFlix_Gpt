@@ -8,10 +8,10 @@ const Head = () => {
   const user = useSelector((store) => store.user);
   useAuth();
   return (
-    <div className="flex  justify-between sm:px-7 absolute z-10  w-[100%] bg-gradient-to-b from-black md:pr-28">
+    <div className="flex  justify-between pr-16 sm:px-7 absolute z-10  w-[100%] bg-gradient-to-b from-black md:pr-28">
       <div className="flex">
         <div>
-          <img className="w-48 sm:w-52 ml-[5%]" src={logo}></img>
+          <img className="my-3 w-32 sm:w-52 sm:m-0 ml-[5%]" src={logo}></img>
         </div>
         {user && (
           <div className="hidden sm:flex ml-8">
