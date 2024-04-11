@@ -11,7 +11,7 @@ const SecondaryContainer = () => {
   const lang = useSelector((store)=>store?.multilang?.lang);
 
   return (
-    <div className=" bg-black h-[150vh] sm:h-[100%]">
+    <div className=" bg-black h-[180vh] sm:h-[100%]">
       <div className="top-20 sm:-top-48 relative z-20">
         <VideoList title={btnLang[lang].homePageHead1} movies={moviesList}></VideoList>
         <VideoList title={btnLang[lang].homePageHead2} movies={upcomingMovies}></VideoList>
