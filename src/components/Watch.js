@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { apiOptions, imgPoster } from "../utils/constant";
 import { useDispatch, useSelector } from "react-redux";
 import { addWatchVideo, addWatchMovies } from "../utils/movieSlice";
 import { AiOutlineLike } from "react-icons/ai";
+import WatchDetails from "./WatchDetails";
 
 const Watch = () => {
   let [searchParams] = useSearchParams();
@@ -44,8 +45,9 @@ const Watch = () => {
   return (
     <div>
       <div className="bg-black h-screen">
+       <Link to={"/browse"}> <button className="bg-black absolute z-20 text-white p-2 rounded-sm w-20 top-3  left-2 sm:top-20 sm:left-10 hover:bg-white hover:text-black">Back</button></Link>
         <iframe
-          className="w-screen aspect-video"
+          className="w-screen md:h-screen aspect-video"
           src={`https://www.youtube.com/embed/${
             trailerVideo?.key
           }?autoplay=1&controls=1&enablejsapi=1&rel=0&version=3${"&mute=0"}`}
@@ -53,19 +55,7 @@ const Watch = () => {
           autoPlay={true}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
-        <div className="md:hidden">
-          <h3 className="text-lg text-white  text-center font-semibold">
-            {trailerVideos.original_title}
-          </h3>
-          <p className="text-sm text-white text-center justify-center p-2 border mb-3">
-            {trailerVideos.overview}
-          </p>
-          <div className="flex justify-between px-3 m-3">
-            <p className="text-white">👍:{trailerVideos.vote_count}</p>
-            <p className="text-white">▶️:{trailerVideos.vote_average}</p>
-          </div>
-          <img src={imgPoster + trailerVideos.poster_path}></img>
-        </div>
+        <WatchDetails trailerVideos={trailerVideos}/>
       </div>
     </div>
   );

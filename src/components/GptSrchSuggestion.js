@@ -2,23 +2,15 @@ import React from "react";
 import VideoList from "./VideoList";
 import { useSelector } from "react-redux";
 import { btnLang } from "../utils/multilingual";
-import Shimmer from "../components/Shimmer";
+import DefaultSuggestion from "../components/DefaultSuggestion";
 
 const GptSrchSuggestion = () => {
   const moviesList = useSelector((store) => store?.gpt?.gptMovies);
   const lang = useSelector((store) => store?.multilang?.lang);
 
-  if (!moviesList)
-    return (
-      <h2 className="pb-2 pl-2 text-lg text-white md:text-3xl md:pb-4 text-center font-semibold pt-5">
-        Search For Your Fav Movies!
-      </h2>
-    );
+  if (!moviesList) return <DefaultSuggestion />;
 
-
-
-  if(moviesList.length==0)return <Shimmer/>
-  return(
+  return (
     <div className="pt-[10%] md:px-[2%] md:pt-10 shadow-lg bg-black bg-opacity-30">
       <h2 className="pb-2 pl-2 text-lg text-white md:text-3xl md:pb-4 text-center font-semibold">
         {btnLang[lang].gptHeading}

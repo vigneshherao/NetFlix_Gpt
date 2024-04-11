@@ -12,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^10.9.0",
+    "font-awesome": "^4.7.0",
     "material-ui-popup-state": "^5.1.0",
     "openai": "^4.33.0",
     "react": "^18.2.0",
