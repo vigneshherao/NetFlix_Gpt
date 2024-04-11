@@ -37,6 +37,10 @@ const Watch = () => {
     dispatch(addWatchVideo(trailer));
   };
 
+  if (trailerVideos == null) {
+    return;
+  }
+
   return (
     <div>
       <div className="bg-black h-screen">

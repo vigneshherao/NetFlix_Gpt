@@ -13,18 +13,18 @@ const VideoCard = ({ img, name }) => {
       onMouseLeave={() => setShowView(false)}
     >
       {showView && (
-        // <Link to={`/watch/?name=${encodeURIComponent(name)}`}>
+        <Link to={`/watch/?name=${encodeURIComponent(name)}`}>
           <div className="hidden sm:block absolute top-32 left-16">
             <span className="text-white font-semibold border p-2 rounded-sm">
               {watch}
             </span>
           </div>
-        // </Link>
+        </Link>
       )}
-      {/* <Link to={`/watch/?name=${encodeURIComponent(name)}`}> */}
+      <Link to={`/watch/?name=${encodeURIComponent(name)}`}>
         {" "}
         <img className="rounded-md" src={imgPoster + img} alt="Poster" />
-      {/* </Link> */}
+      </Link>
     </div>
   );
 };
