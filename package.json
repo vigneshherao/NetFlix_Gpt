@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "env": "^0.0.2",
     "firebase": "^10.9.0",
     "font-awesome": "^4.7.0",
     "material-ui-popup-state": "^5.1.0",
