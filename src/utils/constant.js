@@ -65,18 +65,3 @@ export const gptApi = "AIzaSyB0PQsVW6OmZ6x8kZHBsu0RZ4KjkyAYwgE";
 
 export const image =
   "https://i.ebayimg.com/images/g/hVYAAOSw8GtZTBJ0/s-l1600.jpg";
-
-
-
-  export const movieDetail="https://api.themoviedb.org/3/movie/"
-  export const movieVideo = "/videos";
-
-
-
-  export const nowPlayingAPi ="https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
-
-  export const popularMovies = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
-
-  export const topRatedMovies = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
-
-  export const upComingMoves =  "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";

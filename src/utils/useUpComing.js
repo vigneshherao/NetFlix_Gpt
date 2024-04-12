@@ -1,4 +1,4 @@
-import { apiOptions, upComingMoves } from "../utils/constant";
+import { apiOptions } from "../utils/constant";
 import { useDispatch } from "react-redux";
 import {addUpComingMovies } from "../utils/movieSlice";
 import { useEffect } from "react";
@@ -12,7 +12,7 @@ const useUpComing = () => {
 
   const fetchUpComing = async () => {
     const data = await fetch(
-     upComingMoves,
+      "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1",
       apiOptions
     );
     const movies = await data.json();

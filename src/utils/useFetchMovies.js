@@ -2,7 +2,6 @@ import { addWatchVideo, addWatchMovies } from "../utils/movieSlice";
 import { apiOptions } from "../utils/constant";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { movieDetail, movieVideo } from "../utils/constant";
 
 const useFetchMovies = (name) => {
   const dispatch = useDispatch();
@@ -18,7 +17,7 @@ const useFetchMovies = (name) => {
     const moviews = await data.json();
     dispatch(addWatchMovies(moviews.results));
     const vdata = await fetch(
-      movieDetail + moviews.results[0].id + movieVideo,
+      `https://api.themoviedb.org/3/movie/${moviews.results[0].id}/videos`,
       apiOptions
     );
     const video = await vdata.json();
