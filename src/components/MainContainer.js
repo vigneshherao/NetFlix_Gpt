@@ -21,7 +21,7 @@ const MainContainer = () => {
   return (
     <div className="pt-16 sm:pt-0 bg-black w-screen">
       <VideoTitle title={title} description={overview} />
-      <VideoBackGround videoId={id}  details = {mainVideoPlayer}  />
+      <VideoBackGround videoId={id} details={mainVideoPlayer} />
       <SecondaryContainer />
       <Footer />
     </div>

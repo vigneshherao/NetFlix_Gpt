@@ -10,7 +10,7 @@ const DefaultSuggestion = () => {
   return (
     <div>
       <h2 className="pb-2 pl-2 text-lg text-white md:text-3xl md:pb-4 text-center font-semibold pt-5">
-        {btnLang[lang].defaultSearchHead}
+        {btnLang[lang]?.defaultSearchHead}
       </h2>
       <VideoList movies={upcomingMovies}></VideoList>
     </div>

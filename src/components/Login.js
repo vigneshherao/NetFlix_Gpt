@@ -97,7 +97,7 @@ const Login = () => {
       </div>
       <div className="md:rounded-lg bg-opacity-60 absolute sm:w-4/5 md:w-6/12 lg:min-w-[300px] lg:w-1/4 text-white p-12 bg-black flex flex-col justify-center items-center m-auto my-36 right-0 left-0">
         <h2 className="p-4 text-3xl text-left">
-          {isSignIn ? signOpt.login : signOpt.create}
+          {isSignIn ? signOpt?.login : signOpt?.create}
         </h2>
         {isSignIn ? null : (
           <input
@@ -125,13 +125,13 @@ const Login = () => {
           type="button"
           className="w-full bg-red-700 p-4 font-semibold rounded-md m-4"
         >
-          {isSignIn ? signOpt.login : signOpt.create}
+          {isSignIn ? signOpt?.login : signOpt?.create}
         </button>
         <p
           className="cursor-pointer hover:underline mt-2"
           onClick={signInHandler}
         >
-          {isSignIn ? showOptions.newUser : showOptions.oldUser}
+          {isSignIn ? showOptions?.newUser : showOptions?.oldUser}
         </p>
         <p className="text-sm m-2 text-blue-300 text-center">{captcha}</p>
       </div>

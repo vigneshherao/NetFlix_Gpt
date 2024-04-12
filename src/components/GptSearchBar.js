@@ -49,14 +49,14 @@ const GptSearchBar = () => {
         <input
           ref={searchValue}
           type="text"
-          placeholder={btnLang[lang].gptSearchPlaceHolder}
+          placeholder={btnLang[lang]?.gptSearchPlaceHolder}
           className="p-4 col-span-9 md:col-span-10 rounded"
         ></input>
         <button
           className="bg-red-700 text-white font-bold col-span-3 p-4 md:col-span-2 rounded"
           onClick={handleSearch}
         >
-          {btnLang[lang].search}
+          {btnLang[lang]?.search}
         </button>
       </form>
     </div>

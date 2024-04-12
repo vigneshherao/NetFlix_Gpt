@@ -3,14 +3,14 @@ import useBackGrnVdo from "../utils/useBackGrnVdo";
 import { useSelector } from "react-redux";
 import MovieInfo from "./MovieInfo";
 
-const VideoBackGround = ({ videoId,details }) => {
+const VideoBackGround = ({ videoId, details }) => {
   useBackGrnVdo(videoId);
   const trailerVideo = useSelector((store) => store?.movies?.videoDetail);
   const isInfo = useSelector((store) => store?.movies?.isInfo);
 
   return (
     <div>
-     {isInfo &&  <MovieInfo movieDetails={details}/>}
+      {isInfo && <MovieInfo movieDetails={details} />}
       <iframe
         className="w-screen aspect-video"
         src={`https://www.youtube.com/embed/${
