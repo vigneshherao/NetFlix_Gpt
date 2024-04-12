@@ -1,8 +1,8 @@
 import React from "react";
-import useBackGrnVdo from "../utils/useBackGrnVdo";
+import useBackGrnVdo from "../../utils/hooks/useBackGrnVdo";
 import { useSelector } from "react-redux";
 import MovieInfo from "./MovieInfo";
-import Shimmer from "./Shimmer";
+import Shimmer from "../Shimmer";
 
 const VideoBackGround = ({ videoId,details }) => {
   useBackGrnVdo(videoId);

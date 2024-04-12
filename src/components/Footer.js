@@ -1,5 +1,5 @@
 import React from "react";
-import { footerInfo } from "../utils/stringConstants";
+import { footerInfo } from "../utils/constants/stringConstants";
 
 const Footer = () => {
   return (

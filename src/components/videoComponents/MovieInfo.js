@@ -1,6 +1,6 @@
 import React from "react";
-import { imgPoster } from "../utils/constant";
-import { isInfoChange } from "../utils/movieSlice";
+import { imgPoster } from "../../utils/constants/constant";
+import { isInfoChange } from "../../utils/slice/movieSlice";
 import { useDispatch } from "react-redux";
 
 const MovieInfo = ({ movieDetails }) => {

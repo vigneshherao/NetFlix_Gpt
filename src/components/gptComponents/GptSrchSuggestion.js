@@ -1,8 +1,8 @@
 import React from "react";
-import VideoList from "./VideoList";
+import VideoList from "../videoComponents/VideoList";
 import { useSelector } from "react-redux";
-import { btnLang } from "../utils/multilingual";
-import DefaultSuggestion from "../components/DefaultSuggestion";
+import { btnLang } from "../../utils/constants/multilingual";
+import DefaultSuggestion from "./DefaultSuggestion";
 
 const GptSrchSuggestion = () => {
   const moviesList = useSelector((store) => store?.gpt?.gptMovies);

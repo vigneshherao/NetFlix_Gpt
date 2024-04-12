@@ -1,8 +1,8 @@
-import { addWatchVideo, addWatchMovies } from "../utils/movieSlice";
-import { apiOptions } from "../utils/constant";
+import { addWatchVideo, addWatchMovies } from "../slice/movieSlice";
+import { apiOptions } from "../constants/constant";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { movieDetail, movieVideo } from "../utils/constant";
+import { movieDetail, movieVideo } from "../constants/constant";
 
 const useFetchMovies = (name) => {
   const dispatch = useDispatch();

@@ -1,16 +1,16 @@
 import React from "react";
-import { userIcon } from "../utils/constant";
+import { userIcon } from "../../utils/constants/constant";
 import { FaRegBell } from "react-icons/fa6";
-import { toggleGptBtn } from "../utils/gptSlice";
+import { toggleGptBtn } from "../../utils/slice/gptSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useDispatch, useSelector } from "react-redux";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { removeUser } from "../utils/userSlice";
-import { btnLang, selectLang } from "../utils/multilingual";
-import { changeLanguage } from "../utils/multiSlice";
+import { removeUser } from "../../utils/slice/userSlice";
+import { btnLang, selectLang } from "../../utils/constants/multilingual";
+import { changeLanguage } from "../../utils/slice/multiSlice";
 
 const SignInOption = () => {
   const user = useSelector((store) => store.user);

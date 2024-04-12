@@ -1,8 +1,9 @@
 import React from "react";
-import { apiOptions, imgPoster } from "../utils/constant";
+import {imgPoster } from "../../utils/constants/constant";
+
+
 const WatchDetails = ({ trailerVideos }) => {
-  const { original_title, vote_count, vote_average, overview, poster_path } =
-    trailerVideos;
+  const { original_title, vote_count, vote_average, overview ,} = trailerVideos;
   return (
     <div className="md:hidden">
       <h3 className="text-lg text-white p-5 text-center font-semibold ">
@@ -15,7 +16,7 @@ const WatchDetails = ({ trailerVideos }) => {
         <p className="text-white">👍{vote_count}</p>
         <p className="text-white">▶️{vote_average}</p>
       </div>
-      <img src={imgPoster + poster_path}></img>
+      <img src={imgPoster + trailerVideos.poster_path}></img>
     </div>
   );
 };

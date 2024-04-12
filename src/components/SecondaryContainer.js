@@ -1,6 +1,6 @@
 import React from "react";
-import VideoList from "./VideoList";
-import { btnLang } from "../utils/multilingual";
+import VideoList from "./videoComponents/VideoList";
+import { btnLang } from "../utils/constants/multilingual";
 import { useSelector } from "react-redux";
 
 const SecondaryContainer = () => {

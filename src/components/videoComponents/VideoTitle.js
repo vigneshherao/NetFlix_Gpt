@@ -1,8 +1,8 @@
 import React from "react";
-import { infoBtn, play } from "../utils/stringConstants";
+import { infoBtn, play } from "../../utils/constants/stringConstants";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { isInfoChange } from "../utils/movieSlice";
+import { isInfoChange } from "../../utils/slice/movieSlice";
 
 const VideoTitle = ({ title, description }) => {
   const dispatch = useDispatch();

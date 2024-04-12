@@ -1,6 +1,6 @@
-import { apiOptions, upComingMoves } from "../utils/constant";
+import { apiOptions, upComingMoves } from "../constants/constant";
 import { useDispatch } from "react-redux";
-import {addUpComingMovies } from "../utils/movieSlice";
+import {addUpComingMovies } from "../slice/movieSlice";
 import { useEffect } from "react";
 
 const useUpComing = () => {

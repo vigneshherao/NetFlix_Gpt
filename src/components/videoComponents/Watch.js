@@ -1,8 +1,8 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import WatchDetails from "./WatchDetails";
-import Shimmer from "./Shimmer";
-import useFetchMovies from "../utils/useFetchMovies";
+import Shimmer from "../Shimmer";
+import useFetchMovies from "../../utils/hooks/useFetchMovies";
 
 const Watch = () => {
   let [searchParams] = useSearchParams();

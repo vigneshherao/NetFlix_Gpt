@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import VideoBackGround from "./VideoBackGround";
-import VideoTitle from "./VideoTitle";
+import VideoBackGround from "./videoComponents/VideoBackGround.js";
+import VideoTitle from "./videoComponents/VideoTitle.js";
 import SecondaryContainer from "./SecondaryContainer";
 import Footer from "./Footer.js";
 

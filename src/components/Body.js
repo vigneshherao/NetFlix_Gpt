@@ -1,8 +1,8 @@
 import React from 'react'
 import Browse from "./Browse"
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Login from './Login'
-import Watch from './Watch'
+import Login from './login/Login'
+import Watch from './videoComponents/Watch'
 
 
 const Body = () => {

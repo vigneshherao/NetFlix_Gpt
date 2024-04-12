@@ -1,5 +1,5 @@
 import React from "react";
-import { netflixBackGround } from "../utils/constant";
+import { netflixBackGround } from "../../utils/constants/constant";
 import GptSearchBar from "./GptSearchBar";
 import GptSrchSuggestion from "./GptSrchSuggestion";
 

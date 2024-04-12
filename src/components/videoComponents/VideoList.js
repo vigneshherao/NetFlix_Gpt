@@ -3,7 +3,7 @@ import VideoCard from "./VideoCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { settings } from "../utils/constant";
+import { settings } from "../../utils/constants/constant";
 
 const VideoList = ({ title, movies }) => {
   if (!movies || !Array.isArray(movies) || movies.length === 0) return null;

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Head from "./Head";
-import loginValidation from "../utils/loginValidation";
+import loginValidation from "../../utils/loginValidation";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -8,9 +8,9 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
-import { addUser } from "../utils/userSlice";
-import { netflixBackGround, netflixUser } from "../utils/constant";
-import { captcha, showOptions, signOpt } from "../utils/stringConstants";
+import { addUser } from "../../utils/slice/userSlice";
+import { netflixBackGround, netflixUser } from "../../utils/constants/constant";
+import { captcha, showOptions, signOpt } from "../../utils/constants/stringConstants";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);

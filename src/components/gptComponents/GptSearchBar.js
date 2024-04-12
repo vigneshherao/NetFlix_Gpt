@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import { btnLang } from "../utils/multilingual";
+import { btnLang } from "../../utils/constants/multilingual";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { apiOptions, gptApi } from "../utils/constant";
-import { addGptMovieResult } from "../utils/gptSlice";
+import { apiOptions, gptApi } from "../../utils/constants/constant";
+import { addGptMovieResult } from "../utils/../../utils/slice/gptSlice";
 
 const GptSearchBar = () => {
   const lang = useSelector((store) => store?.multilang?.lang);

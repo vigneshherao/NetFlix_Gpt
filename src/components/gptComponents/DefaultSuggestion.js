@@ -1,7 +1,7 @@
 import React from "react";
-import VideoList from "./VideoList";
+import VideoList from "../videoComponents/VideoList";
 import { useSelector } from "react-redux";
-import { btnLang } from "../utils/multilingual";
+import { btnLang } from "../../utils/constants/multilingual";
 
 const DefaultSuggestion = () => {
   const upcomingMovies = useSelector((store) => store.movies?.upComingMovies);

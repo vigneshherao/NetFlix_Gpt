@@ -1,7 +1,7 @@
 import React from "react";
 import SignInOption from "./SignInOption";
-import { logo, navItems } from "../utils/constant";
-import useAuth from "../utils/useAuth";
+import { logo, navItems } from "../../utils/constants/constant";
+import useAuth from "../../utils/hooks/useAuth";
 import { useSelector } from "react-redux";
 
 const Head = () => {

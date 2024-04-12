@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { image, imgPoster } from "../utils/constant";
-import { watch } from "../utils/stringConstants";
+import { image, imgPoster } from "../../utils/constants/constant";
+import { watch } from "../../utils/constants/stringConstants";
 import { Link } from "react-router-dom";
 
 const VideoCard = ({ img, name }) => {

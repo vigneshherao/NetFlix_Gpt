@@ -1,8 +1,8 @@
-import { apiOptions } from "../utils/constant";
+import { apiOptions } from "../constants/constant";
 import { useDispatch, useSelector } from "react-redux";
-import { addVideoDetails } from "../utils/movieSlice";
+import { addVideoDetails } from "../slice/movieSlice";
 import { useEffect } from "react";
-import { movieDetail, movieVideo } from "../utils/constant";
+import { movieDetail, movieVideo } from "../constants/constant";
 
 const useBackGrnVdo = (videoId) => {
   const backGroundVideoExits = useSelector(
