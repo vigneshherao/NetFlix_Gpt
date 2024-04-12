@@ -1,22 +1,22 @@
 import { apiOptions } from "../utils/constant";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addVideoDetails } from "../utils/movieSlice";
 import { useEffect } from "react";
-
+import { movieDetail, movieVideo } from "../utils/constant";
 
 const useBackGrnVdo = (videoId) => {
+  const backGroundVideoExits = useSelector(
+    (store) => store?.store?.movies?.videoDetail
+  );
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    backGroundVideo();
+    !backGroundVideoExits && backGroundVideo();
   }, []);
 
   const backGroundVideo = async () => {
-    const data = await fetch(
-      `https://api.themoviedb.org/3/movie/${videoId}/videos`,
-      apiOptions
-    );
+    const data = await fetch(movieDetail + videoId + movieVideo, apiOptions);
     const video = await data.json();
     const videoFilter = video.results.filter(
       (video) => video.type === "Trailer"
