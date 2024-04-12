@@ -6,7 +6,7 @@ export const apiOptions = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer"+process.env.REACT_APP_TMDB_API,
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMmE5MWU3YmJhNjFkOWRjMDUwMmUyMmU4YjdmYTc4MSIsInN1YiI6IjY2MDhmODEyZDUxOTFmMDE2NDMwYzE1MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Zr0gK_0EeYSIsF-4rCNIkJSJcnwFj8HVehjvK3yLSmI",
   },
 };
 
@@ -61,7 +61,7 @@ export const settings = {
   ],
 };
 
-export const gptApi =process.env.REACT_APP_GPT_API;
+export const gptApi = "AIzaSyB0PQsVW6OmZ6x8kZHBsu0RZ4KjkyAYwgE";
 
 export const image =
   "https://i.ebayimg.com/images/g/hVYAAOSw8GtZTBJ0/s-l1600.jpg";
