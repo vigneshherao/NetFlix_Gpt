@@ -5,6 +5,7 @@ const gptSlice = createSlice({
   initialState: {
     gptButton: false,
     gptMovies: null,
+    gptShimmer:false
   },
   reducers: {
     toggleGptBtn: (state, action) => {
@@ -13,9 +14,12 @@ const gptSlice = createSlice({
     addGptMovieResult: (state, action) => {
       state.gptMovies = action.payload;
     },
+    checkGptShimmer: (state, action) => {
+      state.gptShimmer = !state.gptShimmer;
+    },
   },
 });
 
-export const { toggleGptBtn, addGptMovieResult } = gptSlice.actions;
+export const { toggleGptBtn, addGptMovieResult ,checkGptShimmer} = gptSlice.actions;
 
 export default gptSlice.reducer;

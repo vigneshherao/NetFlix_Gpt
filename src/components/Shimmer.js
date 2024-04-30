@@ -8,7 +8,7 @@ const Shimmer = () => {
       <div className="text-center">
         <Box sx={{}}>
           <CircularProgress color="primary" />
-          <h2 className="mt-3 text-white">Loading</h2>
+          <h2 className="mt-3 text-white">Loading....</h2>
         </Box>
       </div>
     </div>

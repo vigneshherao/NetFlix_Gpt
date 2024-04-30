@@ -53,7 +53,7 @@ const SignInOption = () => {
           {gpt ? "Home" : btnLang[lang].gptSearchBtn}
         </button>
       </div>
-      <div className="">
+      <div className="hidden sm:block">
         <FaRegBell className="text-white text-xl cursor-pointer" />
       </div>
       <PopupState variant="popover" popupId="demo-popup-menu">

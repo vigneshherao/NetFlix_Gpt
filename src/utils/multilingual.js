@@ -3,6 +3,7 @@ export const btnLang = {
     search: "Search",
     gptSearchPlaceHolder: "What would you like to watch today?",
     gptHeading: "Found Some Intersting Movies For You!",
+    gptShimmer:"Loading Movies ....",
     homePageHead1: "New Release",
     homePageHead2: "Get In On the Action",
     homePageHead3: "Trending Now",

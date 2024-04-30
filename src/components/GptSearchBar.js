@@ -4,7 +4,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { apiOptions, gptApi } from "../utils/constant";
-import { addGptMovieResult } from "../utils/gptSlice";
+import { addGptMovieResult, checkGptShimmer } from "../utils/gptSlice";
+import Shimmer from "./Shimmer";
 
 const GptSearchBar = () => {
   const lang = useSelector((store) => store?.multilang?.lang);
@@ -22,6 +23,7 @@ const GptSearchBar = () => {
   };
 
   const handleSearch = async () => {
+    dispatch(checkGptShimmer(true));
     const query =
       "Act as a movie recommendation system suggest some movies names list based on" +
       searchValue.current.value +
@@ -37,8 +39,14 @@ const GptSearchBar = () => {
 
     const data = await movieNamesArray.map((movie) => movieSearch(movie));
     const results = await Promise.all(data);
+    if(results){
+      dispatch(checkGptShimmer(false))
+    }
     dispatch(addGptMovieResult(results));
   };
+
+
+
 
   return (
     <div className="flex justify-center items-center">
