@@ -10,7 +10,7 @@ const MainContainer = () => {
 
   if (!nowPlaying || !nowPlaying.length) return null;
 
-  const mainVideoPlayer = nowPlaying[5];
+  const mainVideoPlayer = nowPlaying[Math.floor(Math.random() * 20)];
 
   // nowPlaying[6]? nowPlaying[6]:
 

@@ -90,12 +90,12 @@ const Login = () => {
       <Head />
       <div className="absolute w-full h-full">
         <img
-          className="object-cover w-full h-full brightness-50"
+          className="w-full h-full object-cover fixed brightness-50"
           src={netflixBackGround}
           alt="background"
         ></img>
       </div>
-      <div className="md:rounded-lg bg-opacity-60 absolute sm:w-4/5 md:w-6/12 lg:min-w-[300px] lg:w-1/4 text-white p-12 bg-black flex flex-col justify-center items-center m-auto my-36 md:my-20 right-0 left-0">
+      <div className="md:rounded-lg bg-opacity-60 absolute sm:w-4/5 md:w-6/12 lg:min-w-[300px] lg:w-1/4 text-white p-12 bg-black flex flex-col justify-center items-center m-auto mb-10 mt-20 md:my-20 right-0 left-0">
         <h2 className="p-4 text-3xl text-left">
           {isSignIn ? signOpt?.login : signOpt?.create}
         </h2>

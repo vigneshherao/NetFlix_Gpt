@@ -10,7 +10,7 @@ const VideoList = ({ title, movies }) => {
   if (movies.length < 2) return null;
 
   return (
-    <div>
+    <div className="lg:px-12">
       <h1 className="pb-2 pl-2 text-lg text-white md:text-3xl md:pb-4 md:pl-12">
         {title}
       </h1>
