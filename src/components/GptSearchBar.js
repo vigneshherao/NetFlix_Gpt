@@ -25,7 +25,7 @@ const GptSearchBar = () => {
   const handleSearch = async () => {
     dispatch(checkGptShimmer(true));
     const query =
-      "Act as a movie recommendation system suggest some movies names list based on" +
+      "Act as a movie recommendation systems suggest some movies names list based on" +
       searchValue.current.value +
       "6 movies only names ,no need of number ";
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
